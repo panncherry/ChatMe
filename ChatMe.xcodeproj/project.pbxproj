@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		08238D27215DA06F00D52A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08238D26215DA06F00D52A35 /* AppDelegate.swift */; };
-		08238D29215DA06F00D52A35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08238D28215DA06F00D52A35 /* ViewController.swift */; };
 		08238D2C215DA06F00D52A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08238D2A215DA06F00D52A35 /* Main.storyboard */; };
 		08238D2E215DA07100D52A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08238D2D215DA07100D52A35 /* Assets.xcassets */; };
 		08238D31215DA07100D52A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08238D2F215DA07100D52A35 /* LaunchScreen.storyboard */; };
 		08238D3C215DA07100D52A35 /* ChatMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08238D3B215DA07100D52A35 /* ChatMeTests.swift */; };
 		08238D47215DA07100D52A35 /* ChatMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08238D46215DA07100D52A35 /* ChatMeUITests.swift */; };
+		08E8C73D215DD4C400F391AC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8C73C215DD4C400F391AC /* LogInViewController.swift */; };
+		08E8C73F215DDD6000F391AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8C73E215DDD6000F391AC /* SignUpViewController.swift */; };
+		150655937550ADAF383B38FB /* Pods_ChatMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD36F0379C1A87616C5DBCD /* Pods_ChatMe.framework */; };
+		3BCADB125FAD5D256A7CD224 /* Pods_ChatMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A09DF475BFA105F028825D9 /* Pods_ChatMeTests.framework */; };
+		57950D268F369923B8C19589 /* Pods_ChatMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E0DBB6C724769907C2CBB4 /* Pods_ChatMeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		08238D23215DA06F00D52A35 /* ChatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08238D26215DA06F00D52A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08238D28215DA06F00D52A35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08238D2B215DA06F00D52A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08238D2D215DA07100D52A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08238D30215DA07100D52A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,17 @@
 		08238D42215DA07100D52A35 /* ChatMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08238D46215DA07100D52A35 /* ChatMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMeUITests.swift; sourceTree = "<group>"; };
 		08238D48215DA07100D52A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08E8C73C215DD4C400F391AC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		08E8C73E215DDD6000F391AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1F27D23F7B24B07EC8A262E6 /* Pods-ChatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMe.debug.xcconfig"; path = "Target Support Files/Pods-ChatMe/Pods-ChatMe.debug.xcconfig"; sourceTree = "<group>"; };
+		50E0DBB6C724769907C2CBB4 /* Pods_ChatMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A8F2E1E379E0BF7CAAA24E0 /* Pods-ChatMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMeTests.debug.xcconfig"; path = "Target Support Files/Pods-ChatMeTests/Pods-ChatMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A09DF475BFA105F028825D9 /* Pods_ChatMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD36F0379C1A87616C5DBCD /* Pods_ChatMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5931635770758B96809D5B0 /* Pods-ChatMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChatMeUITests/Pods-ChatMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF77BEADE86C38844DA9AD9B /* Pods-ChatMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMe.release.xcconfig"; path = "Target Support Files/Pods-ChatMe/Pods-ChatMe.release.xcconfig"; sourceTree = "<group>"; };
+		B64997CEB194F68B16F27923 /* Pods-ChatMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMeTests.release.xcconfig"; path = "Target Support Files/Pods-ChatMeTests/Pods-ChatMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		DED9140797EDB6A7B5DC2FE3 /* Pods-ChatMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMeUITests.release.xcconfig"; path = "Target Support Files/Pods-ChatMeUITests/Pods-ChatMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150655937550ADAF383B38FB /* Pods_ChatMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCADB125FAD5D256A7CD224 /* Pods_ChatMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57950D268F369923B8C19589 /* Pods_ChatMeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,8 @@
 				08238D3A215DA07100D52A35 /* ChatMeTests */,
 				08238D45215DA07100D52A35 /* ChatMeUITests */,
 				08238D24215DA06F00D52A35 /* Products */,
+				445DEFF7618FC9A3975BBE06 /* Pods */,
+				BBEF8A55E84C59F39D42F3AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				08238D26215DA06F00D52A35 /* AppDelegate.swift */,
-				08238D28215DA06F00D52A35 /* ViewController.swift */,
+				08E8C73C215DD4C400F391AC /* LogInViewController.swift */,
 				08238D2A215DA06F00D52A35 /* Main.storyboard */,
 				08238D2D215DA07100D52A35 /* Assets.xcassets */,
 				08238D2F215DA07100D52A35 /* LaunchScreen.storyboard */,
 				08238D32215DA07100D52A35 /* Info.plist */,
+				08E8C73E215DDD6000F391AC /* SignUpViewController.swift */,
 			);
 			path = ChatMe;
 			sourceTree = "<group>";
@@ -125,6 +145,29 @@
 			path = ChatMeUITests;
 			sourceTree = "<group>";
 		};
+		445DEFF7618FC9A3975BBE06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F27D23F7B24B07EC8A262E6 /* Pods-ChatMe.debug.xcconfig */,
+				AF77BEADE86C38844DA9AD9B /* Pods-ChatMe.release.xcconfig */,
+				5A8F2E1E379E0BF7CAAA24E0 /* Pods-ChatMeTests.debug.xcconfig */,
+				B64997CEB194F68B16F27923 /* Pods-ChatMeTests.release.xcconfig */,
+				A5931635770758B96809D5B0 /* Pods-ChatMeUITests.debug.xcconfig */,
+				DED9140797EDB6A7B5DC2FE3 /* Pods-ChatMeUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BBEF8A55E84C59F39D42F3AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CD36F0379C1A87616C5DBCD /* Pods_ChatMe.framework */,
+				7A09DF475BFA105F028825D9 /* Pods_ChatMeTests.framework */,
+				50E0DBB6C724769907C2CBB4 /* Pods_ChatMeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08238D4B215DA07100D52A35 /* Build configuration list for PBXNativeTarget "ChatMe" */;
 			buildPhases = (
+				ECC72632D79CF00DF10B32E2 /* [CP] Check Pods Manifest.lock */,
 				08238D1F215DA06F00D52A35 /* Sources */,
 				08238D20215DA06F00D52A35 /* Frameworks */,
 				08238D21215DA06F00D52A35 /* Resources */,
+				8CF87EF9CB614D7DD12B6B22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08238D4E215DA07100D52A35 /* Build configuration list for PBXNativeTarget "ChatMeTests" */;
 			buildPhases = (
+				344E82713AEC56F83929BAA8 /* [CP] Check Pods Manifest.lock */,
 				08238D33215DA07100D52A35 /* Sources */,
 				08238D34215DA07100D52A35 /* Frameworks */,
 				08238D35215DA07100D52A35 /* Resources */,
@@ -167,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08238D51215DA07100D52A35 /* Build configuration list for PBXNativeTarget "ChatMeUITests" */;
 			buildPhases = (
+				4B21D3385E02EAF02B948839 /* [CP] Check Pods Manifest.lock */,
 				08238D3E215DA07100D52A35 /* Sources */,
 				08238D3F215DA07100D52A35 /* Frameworks */,
 				08238D40215DA07100D52A35 /* Resources */,
@@ -251,12 +298,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		344E82713AEC56F83929BAA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatMeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B21D3385E02EAF02B948839 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatMeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF87EF9CB614D7DD12B6B22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatMe/Pods-ChatMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatMe/Pods-ChatMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECC72632D79CF00DF10B32E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		08238D1F215DA06F00D52A35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08238D29215DA06F00D52A35 /* ViewController.swift in Sources */,
+				08E8C73F215DDD6000F391AC /* SignUpViewController.swift in Sources */,
+				08E8C73D215DD4C400F391AC /* LogInViewController.swift in Sources */,
 				08238D27215DA06F00D52A35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +571,7 @@
 		};
 		08238D4C215DA07100D52A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F27D23F7B24B07EC8A262E6 /* Pods-ChatMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +590,7 @@
 		};
 		08238D4D215DA07100D52A35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF77BEADE86C38844DA9AD9B /* Pods-ChatMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +609,7 @@
 		};
 		08238D4F215DA07100D52A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8F2E1E379E0BF7CAAA24E0 /* Pods-ChatMeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +631,7 @@
 		};
 		08238D50215DA07100D52A35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64997CEB194F68B16F27923 /* Pods-ChatMeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +653,7 @@
 		};
 		08238D52215DA07100D52A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5931635770758B96809D5B0 /* Pods-ChatMeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +674,7 @@
 		};
 		08238D53215DA07100D52A35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DED9140797EDB6A7B5DC2FE3 /* Pods-ChatMeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
