@@ -16,6 +16,7 @@
 		08E8C73D215DD4C400F391AC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8C73C215DD4C400F391AC /* LogInViewController.swift */; };
 		08E8C73F215DDD6000F391AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8C73E215DDD6000F391AC /* SignUpViewController.swift */; };
 		08E8C742215DE86500F391AC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8C741215DE86500F391AC /* ChatViewController.swift */; };
+		08E8C745215DED3000F391AC /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8C744215DED3000F391AC /* ChatCell.swift */; };
 		150655937550ADAF383B38FB /* Pods_ChatMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD36F0379C1A87616C5DBCD /* Pods_ChatMe.framework */; };
 		3BCADB125FAD5D256A7CD224 /* Pods_ChatMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A09DF475BFA105F028825D9 /* Pods_ChatMeTests.framework */; };
 		57950D268F369923B8C19589 /* Pods_ChatMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E0DBB6C724769907C2CBB4 /* Pods_ChatMeUITests.framework */; };
@@ -54,6 +55,7 @@
 		08E8C73C215DD4C400F391AC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		08E8C73E215DDD6000F391AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		08E8C741215DE86500F391AC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		08E8C744215DED3000F391AC /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		1F27D23F7B24B07EC8A262E6 /* Pods-ChatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMe.debug.xcconfig"; path = "Target Support Files/Pods-ChatMe/Pods-ChatMe.debug.xcconfig"; sourceTree = "<group>"; };
 		50E0DBB6C724769907C2CBB4 /* Pods_ChatMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8F2E1E379E0BF7CAAA24E0 /* Pods-ChatMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMeTests.debug.xcconfig"; path = "Target Support Files/Pods-ChatMeTests/Pods-ChatMeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		08238D25215DA06F00D52A35 /* ChatMe */ = {
 			isa = PBXGroup;
 			children = (
+				08E8C743215DED0500F391AC /* Views */,
 				08E8C740215DE83F00F391AC /* View Controllers */,
 				08238D26215DA06F00D52A35 /* AppDelegate.swift */,
 				08238D2A215DA06F00D52A35 /* Main.storyboard */,
@@ -154,6 +157,14 @@
 				08E8C741215DE86500F391AC /* ChatViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		08E8C743215DED0500F391AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08E8C744215DED3000F391AC /* ChatCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		445DEFF7618FC9A3975BBE06 /* Pods */ = {
@@ -410,6 +421,7 @@
 				08E8C73F215DDD6000F391AC /* SignUpViewController.swift in Sources */,
 				08E8C73D215DD4C400F391AC /* LogInViewController.swift in Sources */,
 				08E8C742215DE86500F391AC /* ChatViewController.swift in Sources */,
+				08E8C745215DED3000F391AC /* ChatCell.swift in Sources */,
 				08238D27215DA06F00D52A35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
