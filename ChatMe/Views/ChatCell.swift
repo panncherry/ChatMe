@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import Foundation
 
 class ChatCell: UITableViewCell {
 
     @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!
-        
-    @IBOutlet weak var msgBackgroundView: UILabel!
+    
+    @IBOutlet weak var messageView: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

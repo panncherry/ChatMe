@@ -99,9 +99,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEH-Qv-v2B">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEH-Qv-v2B">
                                 <rect key="frame" x="20" y="630" width="298" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="iju-RN-XeJ"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -118,27 +120,46 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="101.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening Somewhere OVer the Rainbow." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Twn-y6-zyE">
-                                                    <rect key="frame" x="20" y="27" width="374" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prH-nt-Y9l">
+                                                    <rect key="frame" x="20.000000000000004" y="0.0" width="59.333333333333343" height="19.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEA-3l-E7l">
+                                                    <rect key="frame" x="20" y="29.666666666666671" width="374" height="64"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Listening Somewhere OVer the Rainbow. Driking a cup of coffe. Reading a book." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twn-y6-zyE">
+                                                            <rect key="frame" x="10" y="7.9999999999998863" width="354" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.48627450979999998" green="0.70588235290000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Michael" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prH-nt-Y9l">
-                                                    <rect key="frame" x="20" y="5" width="374" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="2Xv-JE-Uyn"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Twn-y6-zyE" secondAttribute="bottom" constant="8" id="7bE-IK-PXM"/>
+                                                        <constraint firstItem="Twn-y6-zyE" firstAttribute="leading" secondItem="QEA-3l-E7l" secondAttribute="leading" constant="10" id="brf-6Y-kHa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Twn-y6-zyE" secondAttribute="trailing" constant="10" id="rfo-Ca-6RJ"/>
+                                                        <constraint firstAttribute="width" constant="374" id="uE2-bc-4xF"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" red="0.52549019610000003" green="0.83921568629999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="QEA-3l-E7l" firstAttribute="top" secondItem="prH-nt-Y9l" secondAttribute="bottom" constant="10" id="M2B-3a-IAo"/>
+                                                <constraint firstAttribute="trailing" secondItem="QEA-3l-E7l" secondAttribute="trailing" constant="1" id="Mrx-kb-u2b"/>
+                                                <constraint firstItem="prH-nt-Y9l" firstAttribute="leading" secondItem="Fha-IN-Gad" secondAttribute="leading" constant="20" id="O38-6R-2aR"/>
+                                                <constraint firstAttribute="trailing" secondItem="prH-nt-Y9l" secondAttribute="trailing" constant="20" id="OoM-gm-JcE"/>
+                                                <constraint firstItem="prH-nt-Y9l" firstAttribute="top" secondItem="Fha-IN-Gad" secondAttribute="top" id="bQy-xA-U6R"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QEA-3l-E7l" secondAttribute="bottom" constant="8" id="i7g-Nj-RjP"/>
+                                                <constraint firstItem="QEA-3l-E7l" firstAttribute="leading" secondItem="Fha-IN-Gad" secondAttribute="leading" constant="20" id="jKl-RF-egc"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageLabel" destination="Twn-y6-zyE" id="ovd-Bo-lgh"/>
-                                            <outlet property="msgBackgroundView" destination="Twn-y6-zyE" id="5Gq-JJ-PEv"/>
+                                            <outlet property="messageView" destination="QEA-3l-E7l" id="2ho-i6-7fR"/>
                                             <outlet property="userNameLabel" destination="prH-nt-Y9l" id="gSJ-az-jNH"/>
                                         </connections>
                                     </tableViewCell>
@@ -170,14 +191,15 @@
                                 <rect key="frame" x="339" y="7" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="8pP-b3-Lva" eventType="touchUpInside" id="Yz2-QH-WjR"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="onLogOut:" destination="8pP-b3-Lva" id="ils-Cv-NGu"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chatMessageField" destination="zEH-Qv-v2B" id="XgZ-rL-jbE"/>
+                        <outlet property="sendButton" destination="Zk3-Mt-adz" id="gRt-eJ-3yB"/>
                         <outlet property="tableView" destination="XPi-dF-fJ5" id="c8f-9s-5b1"/>
                     </connections>
                 </viewController>

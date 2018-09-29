@@ -15,11 +15,15 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var sendButton: UIButton!
+    
     var messages: String!
     
     var parseMessages: [PFObject] = []
     
-    @objc var refresh: UIRefreshControl!
+    var refreshControl: UIRefreshControl!
+    
+    var alertController: UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,25 +36,26 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = 100
         
-        refresh = UIRefreshControl()
-        tableView.insertSubview(refresh, at: 0)
-        refresh = UIRefreshControl()
-        tableView.insertSubview(refresh, at: 0)
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(toRefresh), userInfo: nil, repeats: true)
-
+        refreshControl = UIRefreshControl()
+        tableView.insertSubview(refreshControl, at: 0)
+        
+        sendButton.isEnabled = false
+        chatMessageField.addTarget(self, action: #selector(ChatViewController.textDidChange(_:)), for: .editingChanged)
+        logOutAlert()
+        refreshScreen()
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshScreen), userInfo: nil, repeats: true)
     }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return parseMessages.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.orange
-        cell.selectedBackgroundView = backgroundView
-        //code to set the color of all cells
-        cell.contentView.backgroundColor = UIColor.init(red: 134, green: 214, blue: 148, alpha: 1)
+        cell.messageView.layer.cornerRadius = 10
+        cell.messageView.clipsToBounds = true
         let message = parseMessages[indexPath.row]
         cell.messageLabel.text = message["text"] as? String
         if let user = message["user"] as? PFUser {
@@ -61,6 +66,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
         
     }
+    
     
     @IBAction func sendMsgButton(_ sender: Any) {
         let chatMessage = PFObject(className: "Message")
@@ -81,10 +87,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    @objc func onTimer() {
-        // Add code to be run periodically
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+    
+    @objc func textDidChange(_ textField: UITextField){
+        if(chatMessageField.text?.isEmpty)!{
+            sendButton.isEnabled = false
+        }
+        else{
+            sendButton.isEnabled = true
+        }
     }
+    
     
     func fetchMessages(){
         let query = PFQuery(className: "Message")
@@ -101,16 +113,34 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print("Problem fetching message: \(error!.localizedDescription)")
             }
         }
+        self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
         
     }
     
-    @objc func toRefresh() {
+    
+    @objc func refreshScreen() {
         fetchMessages()
-        self.tableView.reloadData()
     }
     
     
-    @IBAction func onLogOut(_ sender: Any) {
+    @IBAction func logOutButton(_ sender: Any) {
+        PFUser.logOut()
+        present(alertController, animated: true)
+    }
+    
+    
+    func logOutAlert() {
+        alertController = UIAlertController(title: "", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
+        
+        let logoutButton = UIAlertAction(title: "Logout", style: .destructive) { (action) in
+            self.view.window!.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        }
+        alertController.addAction(logoutButton)
+        alertController.addAction(cancelButton)
     }
     
 }
