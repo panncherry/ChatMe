@@ -12,15 +12,18 @@ import Parse
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var userNameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    
+    /*:
+     # Sign Up
+     * Create an account with user inputs
+     */
     @IBAction func registerUser(_ sender: Any) {
         let newUser = PFUser()
         newUser.email = emailTextField.text
@@ -56,6 +59,12 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    
+    /*:
+     # Bad or Missing Username Alert
+     * Display error message
+     * Clear the text fields
+     */
     func alert(title: String, message: String){
         let alert = UIAlertController(title: "Error", message: "Bad or missing username.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -66,6 +75,12 @@ class SignUpViewController: UIViewController {
         emailTextField.text = ""
     }
     
+    
+    /*:
+     # Username Already Taken Alert
+     * Display error message
+     * Clear the text fields
+     */
     func userTakenAlert(title: String, message: String){
         let alert = UIAlertController(title: "Error", message: "Username is already taken. OR Account already exists for this email address.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -76,6 +91,12 @@ class SignUpViewController: UIViewController {
         emailTextField.text = ""
     }
     
+    
+    /*:
+     # Missing Password Alert
+     * Display error message
+     * Clear the text fields
+     */
     func passwordRequiredAlert(title: String, message: String){
         let alert = UIAlertController(title: "Error", message: "Password is required.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -86,6 +107,12 @@ class SignUpViewController: UIViewController {
         emailTextField.text = ""
     }
     
+    
+    /*:
+     # Account Already Exist Alert
+     * Display error message
+     * Clear the text fields
+     */
     func accountExistAlert(title: String, message: String){
         let alert = UIAlertController(title: "Error", message: "Account already exists for this email address.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -96,6 +123,12 @@ class SignUpViewController: UIViewController {
         emailTextField.text = ""
     }
     
+    
+    /*:
+     # Account Successfully Created Alert
+     * Display error message
+     * Clear the text fields
+     */
     func newUserCreatedAlert(title: String, message: String){
         let alert = UIAlertController(title: "Congratulations!!!", message: "Your account is created.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -107,11 +140,19 @@ class SignUpViewController: UIViewController {
     }
     
     
+    /*:
+     # Dismiss Current ViewController
+     * On tap of close button, dismiss current viewController
+     */
     @IBAction func closeButton(_ sender: Any) {
         self.view.window!.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
     }
     
     
+    /*:
+     # Dismiss Keyboard
+     * On tap anywhere on viewController, dismiss keyboard
+     */
     @IBAction func onTappedDimissKeyboard(_ sender: Any) {
         view.endEditing(true)
     }

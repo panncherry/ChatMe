@@ -11,14 +11,20 @@ import UIKit
 import Parse
 
 class LogInViewController: UIViewController {
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    
+    /*:
+     # Log In
+     * Check user credits
+     * Display error alert if user credis are incorrect
+     */
     @IBAction func onLogIn(_ sender: Any) {
         PFUser.logInWithUsername(inBackground: userNameTextField.text!, password: passwordTextField.text!) { (user: PFUser?, error: Error?) in
             if user == nil {
@@ -35,6 +41,10 @@ class LogInViewController: UIViewController {
         }
     }
     
+    
+    /*:
+     # Log In Error Alert
+     */
     func loginErrorAlert(){
         let alert = UIAlertController(title: "Login Error", message: "Hmm..something went wrong. or Username/Email is missing.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -44,10 +54,13 @@ class LogInViewController: UIViewController {
         passwordTextField.text = ""
     }
     
+    
+    /*:
+     # Dismiss Keyboard
+     * On tap, dismiss keyboard
+     */
     @IBAction func onTappedDismissKeyboard(_ sender: Any) {
         view.endEditing(true)
     }
-    
-    
-    
+
 }

@@ -120,9 +120,9 @@
 		08238D25215DA06F00D52A35 /* ChatMe */ = {
 			isa = PBXGroup;
 			children = (
+				08238D26215DA06F00D52A35 /* AppDelegate.swift */,
 				08E8C743215DED0500F391AC /* Views */,
 				08E8C740215DE83F00F391AC /* View Controllers */,
-				08238D26215DA06F00D52A35 /* AppDelegate.swift */,
 				08238D2A215DA06F00D52A35 /* Main.storyboard */,
 				08238D2D215DA07100D52A35 /* Assets.xcassets */,
 				08238D2F215DA07100D52A35 /* LaunchScreen.storyboard */,
@@ -262,13 +262,16 @@
 				TargetAttributes = {
 					08238D22215DA06F00D52A35 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					08238D36215DA07100D52A35 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 08238D22215DA06F00D52A35;
 					};
 					08238D41215DA07100D52A35 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 08238D22215DA06F00D52A35;
 					};
 				};
@@ -607,7 +610,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.ChatMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -626,7 +629,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.ChatMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -647,7 +650,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.ChatMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatMe.app/ChatMe";
 			};
@@ -669,7 +672,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.ChatMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatMe.app/ChatMe";
 			};
@@ -690,7 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.ChatMeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ChatMe;
 			};
@@ -711,7 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RnR.ChatMeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ChatMe;
 			};

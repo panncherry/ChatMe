@@ -12,17 +12,12 @@ import Parse
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var chatMessageField: UITextField!
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var sendButton: UIButton!
     
     var messages: String!
-    
     var parseMessages: [PFObject] = []
-    
     var refreshControl: UIRefreshControl!
-    
     var alertController: UIAlertController!
     
     override func viewDidLoad() {
@@ -67,6 +62,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    /*:
+     # Send Message
+     * Send message when click on sendMsgButton
+     */
     @IBAction func sendMsgButton(_ sender: Any) {
         let chatMessage = PFObject(className: "Message")
         
@@ -85,8 +84,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
+
     
-    
+    /*:
+     # Send Button
+     * if chat message is empty, disable sendButton by setting it as false
+     * Otherwise, set the sendButton to true
+     */
     @objc func textDidChange(_ textField: UITextField){
         if(chatMessageField.text?.isEmpty)!{
             sendButton.isEnabled = false
@@ -97,6 +101,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    /*:
+     # Fetch Chat Message
+     * Retrieve chat messages from database
+     * Reload table view
+     */
     func fetchMessages(){
         let query = PFQuery(className: "Message")
         query.addDescendingOrder("createdAt")
@@ -118,17 +127,30 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    /*:
+     # Refresh Screen
+     * Refresh the screena and fetch messages
+     */
     @objc func refreshScreen() {
         fetchMessages()
     }
     
     
+    /*:
+     # Log Out
+     * Log out the user
+     * Display logOut Alert
+     */
     @IBAction func logOutButton(_ sender: Any) {
         PFUser.logOut()
         present(alertController, animated: true)
     }
     
     
+    /*:
+     # Log Out Alert
+     * Display alert message
+     */
     func logOutAlert() {
         alertController = UIAlertController(title: "", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
         
