@@ -27,8 +27,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.separatorStyle = .none
         
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200
-        tableView.rowHeight = 165
+        tableView.estimatedRowHeight = 50
+        //tableView.rowHeight = 150
         
         refreshControl = UIRefreshControl()
         tableView.insertSubview(refreshControl, at: 0)

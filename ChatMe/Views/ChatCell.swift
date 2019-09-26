@@ -11,6 +11,8 @@ import Foundation
 
 class ChatCell: UITableViewCell {
     
+    // MARK: IBOUTLETS
+ 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageView: UIView!
