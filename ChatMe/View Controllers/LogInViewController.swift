@@ -12,14 +12,17 @@ import Parse
 
 class LogInViewController: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     
+    // MARK: - IBActions
     /*:
      # Log In
      * Check user credits
@@ -37,11 +40,18 @@ class LogInViewController: UIViewController {
                 self.passwordTextField.text = ""
                 self.performSegue(withIdentifier: "logInSegue", sender: nil)
             }
-            
         }
     }
     
+    /*:
+     # Dismiss Keyboard
+     * On tap, dismiss keyboard
+     */
+    @IBAction func onTappedDismissKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
     
+    //MARK: - Helper Functions
     /*:
      # Log In Error Alert
      */
@@ -53,14 +63,4 @@ class LogInViewController: UIViewController {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
-    
-    
-    /*:
-     # Dismiss Keyboard
-     * On tap, dismiss keyboard
-     */
-    @IBAction func onTappedDismissKeyboard(_ sender: Any) {
-        view.endEditing(true)
-    }
-
 }

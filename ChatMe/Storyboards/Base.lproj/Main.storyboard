@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,14 +34,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xkA-cT-NpH">
                                 <rect key="frame" x="86" y="364" width="243" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Q3D-0T-ive">
                                 <rect key="frame" x="86" y="412" width="243" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                             </textField>
@@ -98,24 +95,26 @@
             <objects>
                 <viewController id="8pP-b3-Lva" customClass="ChatViewController" customModule="ChatMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DnP-r7-qnX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zEH-Qv-v2B">
-                                <rect key="frame" x="16" y="634" width="299" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="610" width="299" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="299" id="b2p-tw-uAD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XPi-dF-fJ5">
-                                <rect key="frame" x="0.0" y="64" width="414" height="540"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="137" id="HCg-cQ-fzj" customClass="ChatCell" customModule="ChatMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HCg-cQ-fzj" id="8ra-go-bGl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHe-OK-yQ3">
@@ -125,10 +124,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxQ-ke-f7V">
-                                                    <rect key="frame" x="20" y="50.000000000000007" width="358" height="78.666666666666686"/>
+                                                    <rect key="frame" x="20" y="50" width="358" height="79"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv2-Q2-UCl">
-                                                            <rect key="frame" x="8" y="7.9999999999999964" width="342" height="62.666666666666657"/>
+                                                            <rect key="frame" x="8" y="8" width="342" height="63"/>
                                                             <string key="text">See more ideas about Bubbles, Vector free and Box design. ... Comic bubbles collection by Designer_things Comic style speech bubbles collection. </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -163,13 +162,13 @@
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BottomEdge" translatesAutoresizingMaskIntoConstraints="NO" id="vzM-4R-yrq">
-                                <rect key="frame" x="0.0" y="701" width="414" height="35"/>
+                                <rect key="frame" x="0.0" y="681" width="414" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="bCP-4B-gie"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zk3-Mt-adz">
-                                <rect key="frame" x="333" y="630" width="65" height="34"/>
+                                <rect key="frame" x="333" y="610" width="65" height="34"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.70588235290000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Sv5-Ss-HVQ"/>
@@ -188,10 +187,10 @@
                         <constraints>
                             <constraint firstItem="vzM-4R-yrq" firstAttribute="top" secondItem="zEH-Qv-v2B" secondAttribute="bottom" constant="37" id="1L6-w6-Vb1"/>
                             <constraint firstItem="vzM-4R-yrq" firstAttribute="leading" secondItem="JHH-Ya-7nu" secondAttribute="leading" id="1vP-Nl-CdZ"/>
-                            <constraint firstItem="JHH-Ya-7nu" firstAttribute="trailing" secondItem="Zk3-Mt-adz" secondAttribute="trailing" constant="16" id="Bpe-nZ-2aD"/>
                             <constraint firstItem="Zk3-Mt-adz" firstAttribute="top" secondItem="XPi-dF-fJ5" secondAttribute="bottom" constant="26" id="Faa-8M-RfO"/>
                             <constraint firstItem="vzM-4R-yrq" firstAttribute="bottom" secondItem="JHH-Ya-7nu" secondAttribute="bottom" id="GNG-jm-dA1"/>
                             <constraint firstItem="XPi-dF-fJ5" firstAttribute="trailing" secondItem="JHH-Ya-7nu" secondAttribute="trailing" id="Or4-kL-2LW"/>
+                            <constraint firstItem="JHH-Ya-7nu" firstAttribute="trailing" secondItem="Zk3-Mt-adz" secondAttribute="trailing" constant="16" id="Xh6-Eb-xkc"/>
                             <constraint firstItem="XPi-dF-fJ5" firstAttribute="top" secondItem="JHH-Ya-7nu" secondAttribute="top" id="XoS-8q-5a0"/>
                             <constraint firstItem="vzM-4R-yrq" firstAttribute="top" secondItem="Zk3-Mt-adz" secondAttribute="bottom" constant="37" id="ab5-jd-QyG"/>
                             <constraint firstItem="vzM-4R-yrq" firstAttribute="trailing" secondItem="JHH-Ya-7nu" secondAttribute="trailing" id="dCs-Zz-8cc"/>
@@ -204,7 +203,7 @@
                     <navigationItem key="navigationItem" title="ChatMe" id="pWE-tE-1HV">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Vle-xn-Es2">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d5o-z5-bng">
-                                <rect key="frame" x="339" y="7" width="55" height="30"/>
+                                <rect key="frame" x="339" y="13" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
@@ -228,27 +227,24 @@
             <objects>
                 <viewController id="xUS-op-iO1" customClass="SignUpViewController" customModule="ChatMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LPc-SR-Cc7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHL-p4-w5Y">
                                 <rect key="frame" x="75" y="400" width="264" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-sw-Cw0">
                                 <rect key="frame" x="75" y="339" width="264" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWO-az-ZbS">
                                 <rect key="frame" x="75" y="455" width="264" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -318,7 +314,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vue-JU-ma8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ArA-p2-0yS">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

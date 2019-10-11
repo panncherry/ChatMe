@@ -120,12 +120,11 @@
 		08238D25215DA06F00D52A35 /* ChatMe */ = {
 			isa = PBXGroup;
 			children = (
-				08238D26215DA06F00D52A35 /* AppDelegate.swift */,
 				08E8C743215DED0500F391AC /* Views */,
 				08E8C740215DE83F00F391AC /* View Controllers */,
-				08238D2A215DA06F00D52A35 /* Main.storyboard */,
+				08EC5E8B2350441B00BD53DD /* Storyboards */,
+				08238D26215DA06F00D52A35 /* AppDelegate.swift */,
 				08238D2D215DA07100D52A35 /* Assets.xcassets */,
-				08238D2F215DA07100D52A35 /* LaunchScreen.storyboard */,
 				08238D32215DA07100D52A35 /* Info.plist */,
 			);
 			path = ChatMe;
@@ -165,6 +164,15 @@
 				08E8C744215DED3000F391AC /* ChatCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		08EC5E8B2350441B00BD53DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				08238D2A215DA06F00D52A35 /* Main.storyboard */,
+				08238D2F215DA07100D52A35 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		445DEFF7618FC9A3975BBE06 /* Pods */ = {

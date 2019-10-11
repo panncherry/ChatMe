@@ -9,17 +9,20 @@
 import UIKit
 import Parse
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class ChatViewController: UIViewController {
+    
+    // MARK: IBOutlets
     @IBOutlet weak var chatMessageField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendButton: UIButton!
     
+    // MARK: Properties
     var messages: String!
     var parseMessages: [PFObject] = []
     var refreshControl: UIRefreshControl!
     var alertController: UIAlertController!
     
+    // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -28,7 +31,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-        //tableView.rowHeight = 150
         
         refreshControl = UIRefreshControl()
         tableView.insertSubview(refreshControl, at: 0)
@@ -40,39 +42,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshScreen), userInfo: nil, repeats: true)
     }
     
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parseMessages.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
-        cell.messageView.layer.cornerRadius = 10
-        cell.messageView.clipsToBounds = true
-        let message = parseMessages[indexPath.row]
-        cell.messageLabel.text = message["text"] as? String
-        if let user = message["user"] as? PFUser {
-            cell.userNameLabel.text = user.username
-        } else {
-            cell.userNameLabel.text = "Anonymous"
-        }
-        return cell
-        
-    }
-    
-    
-    /*:
-     # Send Message
-     * Send message when click on sendMsgButton
-     */
+    // MARK: - IBActions
     @IBAction func sendMsgButton(_ sender: Any) {
         let chatMessage = PFObject(className: "Message")
         
         if let currentUser = PFUser.current() {
             chatMessage["user"] = currentUser
         }
-        
         chatMessage["text"] = chatMessageField.text ?? ""
         
         chatMessage.saveInBackground { (success, error) in
@@ -84,7 +60,17 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
-
+    
+    /*:
+     # Log Out
+     * Log out the user
+     * Display logOut Alert
+     */
+    @IBAction func logOutButton(_ sender: Any) {
+        PFUser.logOut()
+        present(alertController, animated: true)
+    }
+    
     
     /*:
      # Send Button
@@ -100,7 +86,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
+    // MARK: - Helper Functions
     /*:
      # Fetch Chat Message
      * Retrieve chat messages from database
@@ -126,7 +112,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
-    
     /*:
      # Refresh Screen
      * Refresh the screena and fetch messages
@@ -134,18 +119,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @objc func refreshScreen() {
         fetchMessages()
     }
-    
-    
-    /*:
-     # Log Out
-     * Log out the user
-     * Display logOut Alert
-     */
-    @IBAction func logOutButton(_ sender: Any) {
-        PFUser.logOut()
-        present(alertController, animated: true)
-    }
-    
     
     /*:
      # Log Out Alert
@@ -162,6 +135,29 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         alertController.addAction(logoutButton)
         alertController.addAction(cancelButton)
+    }
+    
+}
+
+// MARK: - Extension TableView DataSource
+extension ChatViewController: UITableViewDataSource, UITableViewDelegate  {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return parseMessages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
+        cell.messageView.layer.cornerRadius = 10
+        cell.messageView.clipsToBounds = true
+        let message = parseMessages[indexPath.row]
+        cell.messageLabel.text = message["text"] as? String
+        if let user = message["user"] as? PFUser {
+            cell.userNameLabel.text = user.username
+        } else {
+            cell.userNameLabel.text = "Anonymous"
+        }
+        return cell
     }
     
 }

@@ -11,15 +11,17 @@ import Parse
 
 class SignUpViewController: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    
+    // MARK: - IBActions
     /*:
      # Sign Up
      * Create an account with user inputs
@@ -34,9 +36,7 @@ class SignUpViewController: UIViewController {
             , error: Error?) in
             if success {
                 print("Created a new user!!")
-                self.view.window!.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
-                self.newUserCreatedAlert(title: "Congrats!", message: "Created a new user.")
-                
+                self.newUserCreatedAlert(title: "Congratulations!", message: "Your account has been successfully created.")
             } else {
                 print(error?.localizedDescription as Any)
                 if error?._code == 200 {
@@ -59,87 +59,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    
-    /*:
-     # Bad or Missing Username Alert
-     * Display error message
-     * Clear the text fields
-     */
-    func alert(title: String, message: String){
-        let alert = UIAlertController(title: "Error", message: "Bad or missing username.", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-        emailTextField.text = ""
-    }
-    
-    
-    /*:
-     # Username Already Taken Alert
-     * Display error message
-     * Clear the text fields
-     */
-    func userTakenAlert(title: String, message: String){
-        let alert = UIAlertController(title: "Error", message: "Username is already taken. OR Account already exists for this email address.", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-        emailTextField.text = ""
-    }
-    
-    
-    /*:
-     # Missing Password Alert
-     * Display error message
-     * Clear the text fields
-     */
-    func passwordRequiredAlert(title: String, message: String){
-        let alert = UIAlertController(title: "Error", message: "Password is required.", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-        emailTextField.text = ""
-    }
-    
-    
-    /*:
-     # Account Already Exist Alert
-     * Display error message
-     * Clear the text fields
-     */
-    func accountExistAlert(title: String, message: String){
-        let alert = UIAlertController(title: "Error", message: "Account already exists for this email address.", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-        emailTextField.text = ""
-    }
-    
-    
-    /*:
-     # Account Successfully Created Alert
-     * Display error message
-     * Clear the text fields
-     */
-    func newUserCreatedAlert(title: String, message: String){
-        let alert = UIAlertController(title: "Congratulations!!!", message: "Your account is created.", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-        emailTextField.text = ""
-    }
-    
-    
     /*:
      # Dismiss Current ViewController
      * On tap of close button, dismiss current viewController
@@ -148,7 +67,6 @@ class SignUpViewController: UIViewController {
         self.view.window!.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
     }
     
-    
     /*:
      # Dismiss Keyboard
      * On tap anywhere on viewController, dismiss keyboard
@@ -156,4 +74,50 @@ class SignUpViewController: UIViewController {
     @IBAction func onTappedDimissKeyboard(_ sender: Any) {
         view.endEditing(true)
     }
+    
+    // MARK: - Helper Functions
+    func alert(title: String, message: String){
+        displayAlert(title: "Error", message: "Bad or missing username.")
+        clearTextFields()
+    }
+    
+    func userTakenAlert(title: String, message: String){
+        displayAlert(title: "Error", message: "Username is already taken. OR Account already exists for this email address.")
+        clearTextFields()
+    }
+    
+    func passwordRequiredAlert(title: String, message: String){
+        displayAlert(title: "Error", message: "Password is required.")
+        clearTextFields()
+    }
+    
+    func accountExistAlert(title: String, message: String){
+        displayAlert(title: "Error", message: "Account already exists for this email address.")
+        clearTextFields()
+    }
+    
+    func newUserCreatedAlert(title: String, message: String){
+        displayAlert(title: "Congratulations!!!", message: "Your account is created.")
+        clearTextFields()
+    }
+    
+    private func clearTextFields() {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+        emailTextField.text = ""
+    }
+}
+
+// Extension
+extension UIViewController {
+    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true) {
+             self.view.window!.rootViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
