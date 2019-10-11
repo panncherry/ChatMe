@@ -29,7 +29,6 @@ The following **required** user stories are complete:
 - [x] Persist Logged in User
 - [ ] User sees an activity indicator while waiting for authentication
 - [x] User can pull to refresh Chat feed
-- [ ] Add an "Adorable Avatar" for each user by requesting an avatar from the [Adorable Avatars API](https://github.com/adorableio/avatars-api) 
 - [x] Chat Bubble Style Design
 - [x] Expand or contract the cell layout as needed to show the chat message author (user) if it exists
 
@@ -39,7 +38,7 @@ The following **required** user stories are complete:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/Kl6xXkH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/G90eb8A.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
